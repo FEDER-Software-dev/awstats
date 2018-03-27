@@ -2,12 +2,12 @@ From peihsinsu/nodejs
 
 RUN apt-get update -y && apt-get install apache2 -y && \
   cd / && \
-  wget http://prdownloads.sourceforge.net/awstats/awstats-7.3.tar.gz && \
-  tar zxvf awstats-7.3.tar.gz && \
-  cd awstats-7.3/wwwroot/ && \
+  wget http://prdownloads.sourceforge.net/awstats/awstats-7.7.tar.gz && \
+  tar zxvf awstats-7.7.tar.gz && \
+  cd awstats-7.7/wwwroot/ && \
   mkdir -p /var/www/html/awstats && \
   mkdir -p /var/www/html/icon && \
-  cp -r /awstats-7.3/wwwroot/icon /var/www/html/ && \
+  cp -r /awstats-7.7/wwwroot/icon /var/www/html/ && \
   chown www-data:www-data -R /var/www/html/icon/ && \
 #  service apache2 restart && \
   a2enmod cgi && \
